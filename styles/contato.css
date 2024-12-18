@@ -1,0 +1,96 @@
+.contato {
+    /*/Alterar a sessão inteira para fundo branco./*/
+    background-color: var(--branco);
+    /*/Coloca espaçamento entre as bordas/*/
+    padding: 1em;
+}
+
+.contato__titulo {
+    /*/Altera cor da fonte/*/
+    color: var(--azul-degrade);
+    /*/Altera o peso da fonte/*/
+    font-weight: 500;
+    /*/Altera o espaçamento./*/
+    margin: 1em;
+    /*/Altera o tamanho da fonte/*/
+    font-size: 18px;
+}
+
+.contato__email {
+    /*/Aumentar espessura/*/
+    padding: 1em;
+    /*/deixa o fundo transparente/*/
+    background-color: var(--branco);
+    /*/faz uma borda com expessura de 1 solida quer dizer que é uma linha perfeita e cor branca/*/
+    border: 1px solid var(--azul-degrade);
+    /*/deixa a cor do texto de dentro branca/*/
+    color: var(--azul-degrade);
+    /*/deixa arredondado/*/
+    border-radius: 24px;
+    /*/Largura/*/
+    width: 80%;
+    /*/Espaçametno/*/
+    margin: 1em;
+}
+
+.contato__texto {
+    /*/Espaçametno/*/
+    margin: 1em;
+    /*/Peso da fonte/*/
+    font-weight: 300;
+}
+
+/*/Configurações dentro do input/*/
+.contato__email::placeholder {
+    /*/Tipo da fonte/*/
+    font-family: var(--fonte-principal);
+    /*/Tamanho da fonte/*/
+    font-size: 14px;
+    /*/Peso da fonte/*/
+    font-weight: 400;
+    /*/cor Texto do input/*/
+    color: var(--azul-degrade);
+    /*/Anexando a lupa no input, e tirando a repetição, se não ia ficar cheio de lupa/*/
+    background: url("../assets/Email.svg") no-repeat;
+    /*/Coloca a lupinha um pouco mais pra frente/*/
+    background-position: 1em;
+    /*/Coloca o texto um pouco pra frente/*/
+    padding-left: 3em;
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1024px) {
+    .contato {
+        /*/Quebrar em box/*/
+        display: flex;
+        /*/Deixar o input menor/*/
+        justify-content: center;
+        /*/Deixar o input menor/*/
+        align-items: center;
+    }
+
+    .contato__titulo {
+        /*/Alterando o tamanho da fonte./*/
+        font-size: 24px;
+    }
+
+    .contato__descricao {
+        /*/Alterando espaçamento/*/
+        margin-right: 1em;
+        width: 30%;
+    }
+
+    .contato__email {
+        /*/Diminuir o tamanho do input/*/
+        width: 30%;
+    }
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1728px) {
+
+    .contato {
+        padding: 3em 20vw;
+    }
+
+}

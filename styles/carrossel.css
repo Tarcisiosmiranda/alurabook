@@ -1,0 +1,191 @@
+.carrossel__titulo {
+    /*/Alterando a cor da fonte para laranjado/*/
+    color: var(--laranja);
+    /*/Deixando o fundo branco/*/
+    background-color: var(--branco);
+    /*/Deixando o texto centralizado/*/
+    text-align: center;
+    /*/Deixado a fonte toda maiuscula/*/
+    text-transform: uppercase;
+    /*/Tamanho da fonte/*/
+    font-size: 18px;
+    /*/Peso da fonte/*/
+    font-weight: 700;
+    /*/Espaçamento relogio, em cima, direito, em baixo, esquerdo/*/
+    padding: 1em 0 0.5em 0;
+}
+
+.swiper-slide img {
+    /*/Colocar o livro pra ocupar 100% da tela/*/
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    /*/Ocultar as setinhas do componente/*/
+    display: none;
+}
+
+.swiper-pagination {
+    /*/Colocar as três bolinhas do componente na parte superior da tabela.+/*/
+    position: initial;
+    /*/Espaçamento das bolinhas/*/
+    margin: 0.5em 0;
+}
+
+.card__descrição {
+    /*/Separando os containers, por padrão separa em linha./*/
+    display: flex;
+    /*/Faz um espaçamento entre os itens./*/
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card__botões {
+    /*/Separando os containers, por padrão separa em linha./*/
+    display: flex;
+    /*/Faz um espaçamento entre os itens./*/
+    justify-content: space-between;
+}
+
+.botões {
+    /*/Deixa um icone do lado do outro/*/
+    display: flex;
+}
+
+.card {
+    /*/Deixa o fundo branco/*/
+    background-color: var(--branco);
+    /*/Cria um quadrado com a broda preta/*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*/Deixa a borda arredondadad./*/
+    border-radius: 10px;
+    /*/Faz um distanciamento dos elementos fora da caixa/*/
+    margin: 1em;
+    /*/Faz um distanciamento dos elementos dentro da caixa/*/
+    padding: 1em;
+}
+
+.descrição__titulo {
+    /*/Alterando cor/*/
+    color: var(--laranja);
+    /*/Alterando a fonte/*/
+    font-family: var(--fonte-principal);
+    /*/Alterando peso da fonte/*/
+    font-weight: 700;
+}
+
+.descrição__titulo-livro {
+    /*/Alterando cor/*/
+    color: var(--azul);
+    /*/Alterando tamanho da fonte/*/
+    font-size: 18px;
+    /*/Alterando peso da fonte/*/
+    font-weight: 700;
+    /*/Criando espaçamento entre os textos./*/
+    margin: 0.5em 0;
+}
+
+.descrição__texto {
+    /*/Alterando tamanho da fonte/*/
+    font-size: 14px;
+}
+
+.botões_item {
+    /*/Separando o coração do carrinho de compras/*/
+    margin: 0 0.5em;
+}
+
+.botões__ancora {
+    /*/Deixando o fundo laranjado/*/
+    background: var(--laranja);
+    /*/Deixando a letra branca/*/
+    color: var(--branco);
+    /*/removendo o link/*/
+    text-decoration: none;
+    /*/Alterando o peso/*/
+    font-weight: 700;
+    /*/Deixando o texto no centro./*/
+    text-align: center;
+    /*/Espessura do input/*/
+    padding: 1em 2.2em;
+}
+
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo {
+        /*/Tamanho da fonte?/*/
+        font-size: 26px;
+    }
+
+    .swiper-pagination {
+        /*/Espaçamento das bolinhas de paginação/*/
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper {
+        /*/Diminuindo o espaçamento do livro em relação a tela inteira./*/
+        width: 60%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        /*/Fazer as cetinhas aparecerem/*/
+        display: block;
+        top: 60%;
+    }
+
+    .card {
+        /*/Diminuindo o tamanho do card/*/
+        width: 40%;
+        /*/Centralizando o card./*/
+        margin: 2em auto;
+    }
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1728px) {
+
+    .carrossel__container {
+        /*/Alinhando a margem, vw largura do viewport, largura da nossa tela./*/
+        margin: 0 20vw 3em 20vw;
+        /*/Quebrando o container/*/
+        display: flex;
+        /*/Alinhando os componentes no centro/*/
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        /*/Espaçamento das bolinhas de paginação/*/
+        margin: 1em 0;
+    }
+
+    .swiper {
+        /*/Diminuindo o tamanho dos livros./*/
+        width: 50%;
+    }
+
+    .descrição__titulo {
+        /*/Alterando o tamanho da fonte/*/
+        font-size: 32px;
+    }
+
+    .descrição__texto {
+        /*/Alterando o tamanho da fonte/*/
+        font-size: 16px;
+    }
+
+    .descrição {
+        /*/limita o tamanho do texto./*/
+        margin-right: 6em;
+    }
+
+    .card {
+        /*/Achatando o card/*/
+        width: 60%;
+        /*/Espaçamento./*/
+        margin-left: 3em;
+    }
+
+}

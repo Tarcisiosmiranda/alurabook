@@ -1,0 +1,73 @@
+hr {
+    /*/Tirar espaçamento de margem./*/
+    margin: 0;
+}
+
+.rodapé {
+    /*/Modificar fundo para cor branca./*/
+    background-color: var(--branco);
+    /*/Colocar espaçamento entre linhas/*/
+    padding: 1em;
+}
+
+.lista-rodapé {
+    display: none;
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1024px) {
+    .rodapé {
+        /*/Quebra a estrutura em container/*/
+        display: flex;
+        /*/Justifica os container/*/
+        justify-content: space-around;
+    }
+
+    .lista-rodapé {
+        /*/Colo a tag paga ser apresentada./*/
+        display: block;
+    }
+
+    .lista-rodapé__item {
+        /*/Quebra em container/*/
+        display: flex;
+        /*/Centraliza./*/
+        align-items: center;
+    }
+
+    .lista-rodapé__link {
+        /*/Altera a fonte para a cor cinza./*/
+        color: var(--cinza);
+        /*/remove o link./*/
+        text-decoration: none;
+        /*/Altera o espaçamento entre a lista/*/
+        padding: 1em;
+    }
+
+    .rodapé__titulo {
+        /*/Altera o tamanho da fonte/*/
+        font-size: 24px;
+    }
+
+    .lista-rodapé__titulo {
+        /*/Altera o tamanho da fonte/*/
+        font-size: 14px;
+        /*/Altera a cor da fonte./*/
+        color: var(--cinza);
+    }
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1728px) {
+    .lista-rodapé {
+        /*/Cria a bordinha/*/
+        border-left: 1px solid var(--cinza);
+        /*/Cria o espaçamento/*/
+        padding: 1em;
+    }
+
+    .rodapé {
+        /*/Criando espaçamento da borda de cima/*/
+        padding: 3em 0;
+    }
+}

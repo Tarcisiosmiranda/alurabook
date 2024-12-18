@@ -1,0 +1,243 @@
+.cabeçalho__menu-hamburguer {
+    /*/Largura do menu/*/
+    width: 24px;
+    /*/Altura do menu/*/
+    height: 24px;
+    /*/Anexando a imagem do menu/*/
+    background-image: url("../assets/Menu.svg");
+    /*/Permite customizar a altera e largura do menu./*/
+    display: inline-block;
+    /*/Sempre que anexar uma imagem é bom usar esse comando para não se repetir/*/
+    background-repeat: no-repeat;
+    /*/Centralizar o menu altura/*/
+    background-position: center;
+}
+
+/*/Trocando a imagem no clique/*/
+.container__botao:checked~.container__rotulo>.cabeçalho__menu-hamburguer {
+    background-image: url("../assets/Menu Aberto.svg");
+}
+
+/*/Trocando a cor do fundo no clique/*/
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
+.cabeçalho {
+    /*/Alterando a cor do fundo para branco/*/
+    background-color: var(--branco);
+    /*/Quebro o que estiver na classe em container/*/
+    display: flex;
+    /*/Separo o container, cada um para um lado/*/
+    justify-content: space-between;
+    /*/Faz o alinhamento dos container tudo na mesma linha/*/
+    align-items: center;
+    /*/permite customizar o tamanho da lista/*/
+    position: relative;
+}
+
+.container {
+    background-origin: padding-box;
+    /*/Fazendo um container na imagem do amburguer pra ficar igual os itens./*/
+    display: flex;
+    /*/Faz o alinhamento dos container tudo na mesma linha/*/
+    align-items: center;
+}
+
+.container__imagem {
+    /*/ Espessura Fazendo espaçamento entre as imagens./*/
+    padding: 1em;
+}
+
+.lista-menu {
+    /*/Oculta a lista de menu, forçando o usuário digitar no amburguer para aparecer./*/
+    display: none;
+    /*/permite customizar o tamanho da lista/*/
+    position: absolute;
+    /*/Posicionar o checking pra baixo da lista 100%/*/
+    top: 100%;
+    /*/Deixar a margem até mais na frente perto do coração/*/
+    width: 60vw;
+}
+
+/*/Coloca ação no botão do check. Combinador CSS, se o check estiver preenchido /*/
+.container__botao:checked~.lista-menu {
+    /*/Quando clica apresenta a lista./*/
+    display: block;
+}
+
+/*/Parametrizando duas classes./*/
+.lista-menu__titulo,
+.lista-menu__item {
+    /*/Espessura Colocando espaçamento./*/
+    padding: 1em;
+    /*/Colocando o fundo branco./*/
+    background-color: var(--branco);
+    /*/Alterando cor./*/
+    color: var(--branco);
+}
+
+.lista-menu__titulo {
+    /*/Colocando cor/*/
+    color: var(--laranja);
+    /*/Alterando peso da fonte/*/
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    /*/Colocando cor/*/
+    color: var(--azul-degrade);
+    /*/Colocando letra maiuscula/*/
+    text-transform: uppercase;
+    /*/Remove o link do texto/*/
+    text-decoration: none;
+    /*/Funcionar em outros tipos de navegadores/*/
+    -webkit-background-clip: text;
+    /*/Funcionar em outros tipos de navegadores/*/
+    /*/-webkit-text-fill-color: transparent;/*/
+    /*/Colocar a cor somente onde tem texto/*/
+    background-clip: text;
+}
+
+.container__botao {
+    /*/remove o icone de check/*/
+    display: none;
+}
+
+.container__titulo {
+    /*/Ocultar o titulo quando for mobile/*/
+    display: none;
+}
+
+.opções {
+    /*/Ocultar o titulo quando for mobile/*/
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        /*/Altera a fonte/*/
+        font-family: var(--secundario);
+        /*/Altera o tamanho da fonte/*/
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        /*/Altera o peso da fonte/*/
+        font-weight: 400;
+        /*/Apresentar o titulo quando for tablet/*/
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        /*/Altera o peso da fonte/*/
+        font-weight: 700;
+    }
+
+    .opções {
+        /*/Dividindo as opções em box/*/
+        display: flex;
+        /*/Trocando a fonte/*/
+        font-family: var(--fonte-principal);
+    }
+
+    .opções__item {
+        /*/Fazendo espaçamento a direita./*/
+        padding: 0 1em;
+        /*/Fazendo a letra ficar maiuscula./*/
+        text-transform: uppercase;
+    }
+
+    .opções__link {
+        /*/Tirando o link da palavra/*/
+        text-decoration: none;
+        /*/Alterando a cor da fonte para preto./*/
+        color: var(--preto);
+    }
+
+    .container__imagem--transparente {
+        /*/Oculta o coração/*/
+        display: none;
+    }
+
+    .cabeçalho__menu-hamburguer {
+        /*/Oculta o amburguer/*/
+        display: none;
+    }
+
+    .opções__botão:checked~.lista-menu {
+        /*/Quando clica apresenta a lista./*/
+        display: block;
+        /*/Deixa o tamanho da lista menor do tamanho da tela/*/
+        width: auto;
+    }
+
+    .opções__botão {
+        /*/remove o check do botão./*/
+        display: none;
+    }
+
+    /*/Ação quando clico no botão do amburguer/*/
+    .opções__botão:checked~.opções__rotulo>.opções__item {
+        /*/Altero a cor do fundo para azul/*/
+        background: var(--azul-degrade);
+        /*/Altero a cor da fonte para branco/*/
+        color: var(--branco);
+    }
+
+    .opções__item {
+        /*/Altero a margem da cor, para ocupar o tamanho inteiro/*/
+        padding: 2em 1em;
+    }
+
+    /*/Quando passa o mouse em cima/*/
+    .lista-menu__item:hover {
+        /*/Altera a cor do fundo./*/
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover .lista-menu__link {
+        /*/Altera a cor do fundo para branco./*/
+        -webkit-text-fill-color: var(--branco);
+        /*/Tira o link da string/*/
+        text-decoration: none;
+    }
+
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1728px) {
+
+    .container__link {
+        /*/Quebra em container./*/
+        display: flex;
+        /*/Deixa centralizado./*/
+        align-items: center;
+        /*/Tira o link./*/
+        text-decoration: none;
+        /*/Altera a fonte para cor preta./*/
+        color: var(--preto);
+    }
+
+    .cabeçalho {
+        /*/Fazer uma margem de espaçamento de todo componente/*/
+        padding: 0 2em;
+    }
+
+    .opções {
+        /*/Coloca toda a imagem para esquerda./*/
+        margin-right: auto;
+    }
+
+    .container__texto {
+        /*/Reaparece o texto/*/
+        display: block;
+    }
+}

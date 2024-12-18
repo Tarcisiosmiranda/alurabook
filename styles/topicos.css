@@ -1,0 +1,73 @@
+.tópicos {
+    /*/Altera a cor do fundo do background/*/
+    background: var(--azul-degrade);
+    /*/Centraliza o texto/*/
+    text-align: center;
+    /*/Espaçamento/*/
+    padding: 1em 0;
+}
+
+.tópicos__titulo {
+    /*/Altera a cor da fonte/*/
+    color: var(--branco);
+    /*/Altera o peso da fonte/*/
+    font-weight: 300;
+}
+
+.tópicos__lista {
+    /*/Quebra em container/*/
+    display: flex;
+    /*/Quebra quando passa da margem./*/
+    flex-wrap: wrap;
+    /*/Centraliza a impressão/*/
+    justify-content: center;
+}
+
+.tópicos__item {
+    /*/Espaçamento/*/
+    margin: 2em 0.5em;
+}
+
+.tópicos__link {
+    /*/Altera a cor para branco/*/
+    color: var(--branco);
+    /*/Coloca espaçamento/*/
+    padding: 1em;
+    /*/Deixa o fundo laranjado/*/
+    background-color: var(--laranja);
+    /*/Sumir com o link/*/
+    text-decoration: none;
+    /*/Alterar o tamanho da fonte/*/
+    font-size: 14px;
+    /*/Peso da fonte/*/
+    font-weight: 700;
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1024px) {
+    .tópicos__titulo {
+        /*/Altera o tamanho da fonte/*/
+        font-size: 24px;
+    }
+
+    .tópicos__link {
+        /*/Altera o tamanho da fonte/*/
+        font-size: 24px;
+    }
+}
+
+/*/Trabalhando com resoluções responsivas./*/
+@media screen and (min-width: 1728px) {
+
+    .tópicos {
+        /*/Ajusta o espaçamento./*/
+        padding: 3em 30vw;
+    }
+
+    .tópicos__titulo {
+        /*/Altera o tamanho da fonte/*/
+        font-size: 32px;
+        /*/Modifica a margem/*/
+        margin: 0.5em;
+    }
+}
